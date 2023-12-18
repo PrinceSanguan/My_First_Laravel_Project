@@ -12,24 +12,21 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
 
-    $array [] = "Prince";
-    $array [] = "Magnus";
-    $array [] = "Nakamura";
-
-    $array2['names'] = $array;
-
-    return view('welcome', $array2);
+    return view('welcome');
 });
 
 Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/user', function () {
+Route::get('/user',[UserController::class,'index']);
+
+/* Route::get('/user', function () {
 
     return view('user');
-});
+}) */;
  
