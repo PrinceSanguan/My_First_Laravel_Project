@@ -10,12 +10,18 @@
 </head>
 <body>
   @include('header')
+  
   <h1>This is Sign Up page!</h1>
-  <form method="post">
-    <input class="textbox" type="text" name="email" placeholder="email" autofocus><br>
-    <input class="textbox" type="text" name="name" placeholder="name"><br>
 
-    <input class="btn" type="submit" value="submit" name="submit">
+  <form method="post">
+    {{$errors}}
+    @csrf
+      <input class="textbox" type="text" name="email" placeholder="email" autofocus><br>
+      <input class="textbox" type="text" name="name" placeholder="name"><br>
+      <input class="textbox" type="password" name="password" placeholder="password"><br>
+
+
+      <input class="btn" type="submit" value="submit" name="submit">
   </form>
 </body>
 </html>
