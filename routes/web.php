@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\SignUpController;
 
 Route::get('/', function () {
 
@@ -23,7 +24,11 @@ Route::get('/about', function () {
     return view('about');
 });
 
+
+
 Route::get('/user',[UserController::class,'index']);
+
+Route::get('/signup',[SignUpController::class,'index']);
 
 /* Route::get('/user', function () {
 

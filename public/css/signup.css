@@ -1,0 +1,29 @@
+form {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    border: solid thin #aaa;
+    margin: auto;
+}
+
+form .textbox {
+    width: 95%;
+    padding: 10px;
+    border: solid thin #aaa;
+    border-radius: 5px;
+    margin: 4px;
+    outline: none;
+}
+
+form .btn {
+    width: 120px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 4px;
+    padding: 10px;
+    cursor: pointer;
+}
