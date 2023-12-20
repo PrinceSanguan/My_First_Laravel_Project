@@ -3,15 +3,24 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use App\Models\User;
 
 class UserController extends Controller
 {
-    //
-    public function index() {
+    public function index($id = null) {
+        $arr = [];
 
-        return DB::select("select * from users");
+        if ($id) {
+            // Select a specific user if $id is provided
+            $data = User::where('id', $id)->get();
+        } else {
+            // Select all users if $id is null
+            $data = User::all();
+        }
 
-        return view('user');
+        $arr['data'] = $data;
+
+        return view('user', $arr);
     }
 }
+

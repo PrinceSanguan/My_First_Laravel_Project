@@ -25,8 +25,8 @@ Route::get('/about', function () {
 });
 
 
-
 Route::get('/user',[UserController::class,'index']);
+Route::get('/user/{id}',[UserController::class,'index']);
 
 Route::get('/signup' ,[SignUpController::class,'get']);
 Route::post('/signup' ,[SignUpController::class,'post']);
